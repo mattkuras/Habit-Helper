@@ -1,0 +1,59 @@
+.identity-form {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 30%;
+    margin: auto;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.identity-form form {
+    display: flex;
+    flex-direction: column;
+    margin: 100px auto 10px auto;
+    border: seagreen solid 3px;
+    border-radius: 30px;
+    top: 0;
+    padding: 10px;
+}
+
+.id-form-input {
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.id-form-input.description-input {
+    margin-bottom: 2px;
+}
+h4{
+    margin: 1rem;
+    margin-top: .5rem;
+}
+
+.id-label {
+    margin-bottom: 10px;
+}
+
+.id-submit-button {
+    height: 50px;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    margin-top: 0px;
+}
+
+#drop-down-categories {
+    text-align: center;
+}
+
+select {
+    text-align: center;
+    text-align-last: center;
+}
+
+option {
+    text-align: left;
+    /* reset to left*/
+  }
+
