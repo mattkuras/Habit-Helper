@@ -29,6 +29,13 @@ class Identity < ApplicationRecord
         end
     end
 
+    def self.reset_checked_boxes
+        Identity.all.each do |id|
+            id.checked_boxes = 0
+        end         
+    end
+
+
     def total_days 
         old_date = Date.parse(self.created_at.to_s)
         new_date = Date.parse(Date.today.to_s)

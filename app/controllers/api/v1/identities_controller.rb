@@ -24,6 +24,8 @@ module Api
 
             def update
                 identity = Identity.find_by(id: params[:id])
+                new_successful_days = params[:checked_boxes] - identity.checked_boxes
+                identity.successful_days = identity.successful_days += new_successful_days
                 if identity.update(identity_params)
                     render json: IdentitySerializer.new(identity).serialized_json
                 else
@@ -47,7 +49,8 @@ module Api
                 :name,
                 :description,
                 :standard,
-                :category_id
+                :category_id,
+                :checked_boxes
             )
         end
 

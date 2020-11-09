@@ -12,7 +12,10 @@ module Api
                 if @user.save 
                     
                     login!
-                    render json: UserSerializer.new(@user).serialized_json
+                    render json: {
+                        logged_in: true,
+                        user: @user
+                    }
                 else
                     render json: { error: @user.errors.messages }, status: 422
                 end

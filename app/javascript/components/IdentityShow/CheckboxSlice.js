@@ -12,7 +12,6 @@ const initialState = []
         prepare(checkboxId,){
           return{
             payload: {
-              id: nanoid(),
               title,
               content,
               user: userId

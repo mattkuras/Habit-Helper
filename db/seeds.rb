@@ -45,7 +45,6 @@ identities = Identity.create([
     { 
       name: "Meditator",
       description: "",
-      days: 20,
       successful_days: 19,
       category_id: 1,
       standard: 7,
@@ -54,7 +53,6 @@ identities = Identity.create([
       
     {   name: "Guitarist",
         description: "",
-        days: 20,
         successful_days: 15,
         category_id: 2,
         standard: 7,
@@ -63,7 +61,6 @@ identities = Identity.create([
     {   
         name: "Developer",
         description: "",
-        days: 20,
         successful_days: 16,
         category_id: 6,
         standard: 5,
@@ -72,7 +69,6 @@ identities = Identity.create([
     {   
         name: "Photographer",
         description: "",
-        days: 6,
         successful_days: 6,
         category_id: 5,
         standard: 2,
@@ -81,7 +77,6 @@ identities = Identity.create([
     {   
         name: "Writer",
         description: "",
-        days: 9,
         successful_days: 6,
         category_id: 7,
         standard: 3,
@@ -90,10 +85,10 @@ identities = Identity.create([
     {   
         name: "Athlete",
         description: "",
-        days: 15,
         successful_days: 11,
         category_id: 3,
         standard: 5,
         user_id: 1
     },
 ])
+

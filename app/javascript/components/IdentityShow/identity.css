@@ -19,6 +19,11 @@
     /* border: black solid 2px; */
     padding-top: 0px;
 }
+.update-id {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
 
 #id-name {
     text-align: center;

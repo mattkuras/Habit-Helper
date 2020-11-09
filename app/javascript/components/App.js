@@ -42,9 +42,7 @@ const App = () => {
 
   const handleLogin = (data) => {
     setUser(data.user)
-
     setIsLoggedIn(true)
-    // history.push('/')
   }
   const handleLogout = () => {
     setIsLoggedIn(false)

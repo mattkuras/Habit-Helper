@@ -32,7 +32,7 @@ handleSubmit = (event) => {
       password_confirmation: password_confirmation
     }
 axios.post('/api/v1/users', {user}, {withCredentials: true})
-    .then(response => { console.log(response)
+    .then(response => { console.log(response.data)
       if (response.status === 200) {
         this.props.handleLogin(response.data)
         this.redirect()

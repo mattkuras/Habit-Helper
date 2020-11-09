@@ -1,43 +1,40 @@
-import React, { Fragment, useState } from 'react' 
+import React, { Fragment, useState, useEffect } from 'react' 
 import './StandardIcon.css'
-import { useDispatch } from 'react-redux'
-import { isChecked, selectCheckbox } from './CheckboxSlice'
-import { useSelector } from 'react-redux'
 
 
 const standardIcon = (props) => {
 
-    const dispatch = useDispatch()
-
-    const checked = useSelector(selectCheckbox)
-
-    const checkedBox = (e) => {
-            dispatch(
-                isChecked()
-              )
-      }
+    const [check, setCheck] = useState(props.checked_box)
 
     const day = props.day + 1
 
-   let disabledBox;
-   if (props.disabled) {
-       disabledBox = true
-   } else {
-       disabledBox = false 
+//    let disabledBox;
+//    if (props.disabled) {
+//        disabledBox = true
+//    } else {
+//        disabledBox = false 
+//    }
+
+   
+//    useEffect(() => {
+//     if (props.checked_box) {
+//         setCheck(true)
+//      }
+//     //  else {
+//     //      setCheck(false)
+//     //  }
+//    })
+
+   const controlCheckBox = () => {
+    check ? setCheck(false) : setCheck(true);
    }
 
-  //  const checkboxId = document.getElementById(`checkbox-${day}`)
-  //  const checkBox = useSelector(state => state.checks.find(check => check.id == checkboxId))
-   
-  //  checkBox && checkBox.checked == true ? checkboxStatus = true : checkboxStatus = false 
-
-  //  let checkboxStatus;
 
 
     return(
         <div className='checkbox-container'>
             <label className='checkbox-label'>Day {day}</label>
-            <input disabled={disabledBox}  type='checkbox' className='icon' id={`${props.name}checkbox-${day}`} onChange={props.handleChange, checkedBox}/> 
+            <input checked={check}  type='checkbox' className='icon' id={`${props.name}checkbox-${day}`} onClick={controlCheckBox} onChange={props.handleChange}/> 
         </div>
     
 )}

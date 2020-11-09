@@ -34,10 +34,8 @@ import './CreateIdentities.css'
      }, []
      )
     const cats = categories.map(cat => {
-
       return (
         <DropdownCategories 
-        
         key={cat.attributes.name}
         data = {cat}
         />
@@ -76,22 +74,21 @@ import './CreateIdentities.css'
             .catch(error => console.log('api errors:', error))
           };
 
-        const { category_id, name, description, standard } = state 
 
     return(
         <div className='identity-form'>
             <form >
               <label className='id-label' name='category_id'>Which category does this identity best fit into?</label>
-               <select name='category_id' className='id-form-input' onChange={onChange} >
-                 <option value='' disabled selected hidden>select one</option>
+               <select name='category_id' defaultValue={'select one'} className='id-form-input' onChange={onChange} >
+                 <option  disabled hidden>select one</option>
                  {cats}
                </select>
 
                 <label className='id-label' name='name'>What should we name this identity?<br/>eg. Musician, Reader, Runner, Meditator, etc.</label>
-                <input className='id-form-input' name='name' value={name} onChange={onChange}/>
+                <input className='id-form-input' name='name'  onChange={onChange}/>
                 
                 <label className='id-label' name='description'>Description (this is optional)</label>
-                <input className='id-form-input description-input' name='description' value={description} onChange={onChange} />
+                <input className='id-form-input description-input' name='description' value={state.description} onChange={onChange} />
                 
                 <label className='id-label' name='standard'>How many days a week do you need to participate for YOU to feel like a {state.name}</label>
                 <select name='standard' className='id-form-input' id='standard' onChange={onChange}>
@@ -104,7 +101,6 @@ import './CreateIdentities.css'
                   <option value={6}>6</option>
                   <option value={7}>7</option>
                 </select>
-                <h4>Add another identity</h4>
             </form>
             <button onClick={handleSubmit} className='id-submit-button' placeholder="submit" type="submit">
                  submit

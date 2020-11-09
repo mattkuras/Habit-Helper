@@ -11,7 +11,8 @@ class IdentitySerializer
           :image,
            :id,
             :days_left_in_week,
-             :disabled_boxes
+             :disabled_boxes,
+              :checked_boxes
              
   belongs_to :category
 end
