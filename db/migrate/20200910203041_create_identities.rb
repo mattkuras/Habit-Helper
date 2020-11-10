@@ -6,7 +6,7 @@ class CreateIdentities < ActiveRecord::Migration[6.0]
       t.integer :days
       t.integer :successful_days
       t.text :category 
-      t.text :standard
+      t.integer :standard
       t.belongs_to :user, null: false, foreign_key: true
 
       t.timestamps
