@@ -41,54 +41,54 @@ categories = Category.create([
     {name: "Science"},
 ])
 
-identities = Identity.create([
-    { 
-      name: "Meditator",
-      description: "",
-      successful_days: 19,
-      category_id: 1,
-      standard: 7,
-      user_id: 1
-    },
+# identities = Identity.create([
+#     { 
+#       name: "Meditator",
+#       description: "",
+#       successful_days: 19,
+#       category_id: 1,
+#       standard: 7,
+#       user_id: 1
+#     },
       
-    {   name: "Guitarist",
-        description: "",
-        successful_days: 15,
-        category_id: 2,
-        standard: 7,
-        user_id: 1
-    },
-    {   
-        name: "Developer",
-        description: "",
-        successful_days: 16,
-        category_id: 6,
-        standard: 5,
-        user_id: 1
-    },
-    {   
-        name: "Photographer",
-        description: "",
-        successful_days: 6,
-        category_id: 5,
-        standard: 2,
-        user_id: 1
-    },
-    {   
-        name: "Writer",
-        description: "",
-        successful_days: 6,
-        category_id: 7,
-        standard: 3,
-        user_id: 1
-    },
-    {   
-        name: "Athlete",
-        description: "",
-        successful_days: 11,
-        category_id: 3,
-        standard: 5,
-        user_id: 1
-    },
-])
+#     {   name: "Guitarist",
+#         description: "",
+#         successful_days: 15,
+#         category_id: 2,
+#         standard: 7,
+#         user_id: 1
+#     },
+#     {   
+#         name: "Developer",
+#         description: "",
+#         successful_days: 16,
+#         category_id: 6,
+#         standard: 5,
+#         user_id: 1
+#     },
+#     {   
+#         name: "Photographer",
+#         description: "",
+#         successful_days: 6,
+#         category_id: 5,
+#         standard: 2,
+#         user_id: 1
+#     },
+#     {   
+#         name: "Writer",
+#         description: "",
+#         successful_days: 6,
+#         category_id: 7,
+#         standard: 3,
+#         user_id: 1
+#     },
+#     {   
+#         name: "Athlete",
+#         description: "",
+#         successful_days: 11,
+#         category_id: 3,
+#         standard: 5,
+#         user_id: 1
+#     },
+# ])
 
