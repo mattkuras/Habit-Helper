@@ -14,8 +14,7 @@ module Api
             end
 
             def create 
-                user = User.find_by(id: session[:user_id])
-                user.identities.build(identity_params)
+                current_user.identities.build(identity_params)
                 if identity.save
                     render json: IdentitySerializer.new(identity).serialized_json
                 else
