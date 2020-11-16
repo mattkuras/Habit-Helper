@@ -14,7 +14,7 @@ module Api
             end
 
             def create 
-                current_user.identities.build(identity_params)
+                identity = current_user.identities.build(identity_params)
                 if identity.save
                     render json: IdentitySerializer.new(identity).serialized_json
                 else
