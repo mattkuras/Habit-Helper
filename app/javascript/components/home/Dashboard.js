@@ -35,7 +35,7 @@ const Dashboard = (props) => {
                 setIdentities(resp.data.included)
             }).then(identities.length > 0 ? setLoaded(true) : console.log('didnt get ids yet'))
             .catch(resp => console.log(resp))
-    }, [])
+    }, [identities.length])
 
 
     // map identities data from state with Identity Component
@@ -60,7 +60,7 @@ const Dashboard = (props) => {
     return (
         // create home div, header, subheader, and grid for above map function
         <div className='home'>
-            {idShowOpen ? <IdentityShow user={props.user} show={idShowOpen} id={clickedId} /> : null}
+            {idShowOpen ? <IdentityShow user={props.user} show={idShowOpen} id={clickedId} close={backdropClickHandler} /> : null}
             {backdrop}
             <div className='header'>
                 <h1>Atomic Habits</h1>

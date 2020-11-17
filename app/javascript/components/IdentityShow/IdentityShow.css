@@ -19,11 +19,6 @@
     /* border: black solid 2px; */
     padding-top: 0px;
 }
-.update-id {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-}
 
 #id-name {
     text-align: center;
@@ -58,4 +53,20 @@
     margin: auto;
     text-align: center;
     font-size: 1.5rem;
+ }
+ .update-id-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    position: relative;
+    top: 20px;
+ }
+ .delete-id-button {
+     background: red;
+     position: absolute;
+     bottom: 5px;
+     right: 5px;
+     width: 70px;
+     height: 40px;
+     font-weight: bold;
  }
