@@ -61,7 +61,7 @@ const IdentityShow = (props) => {
             count < identity.checked_boxes ?
                 // array.push(<StandardIcon disabled={'disabled'} user={props.user} name={identity.name} key={count} day={count} handleChange={updateDays}/>) : 
                 array.push(<StandardIcon checked_box={true} user={props.user} name={identity.name} key={count} day={count} handleChange={updateDays} />) :
-                array.push(<StandardIcon key={count} day={count} user={props.user} name={identity.name} handleChange={updateDays} />)
+                array.push(<StandardIcon checked_box={false} key={count} day={count} user={props.user} name={identity.name} handleChange={updateDays} />)
         }
         return array
     }
