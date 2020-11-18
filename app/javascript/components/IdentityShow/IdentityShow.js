@@ -36,10 +36,17 @@ const IdentityShow = (props) => {
     }
 
     const deleteIdentity = () => {
+        const callBack = () => {
+            const newState = props.identities.filter((item) => item.id !== props.id)
+            props.setIdentities(newState)
+        }
         axios.delete(`/api/v1/identities/${props.id}`, { withCredentials: true })
-        .then(resp => {
-            console.log(resp)
-        })
+            .then(resp => {
+                if (resp.data.status == 200){
+                    callBack()
+                }
+                else {console.log('there was an error deleting the identity')}
+            })
         props.close()
 
     }

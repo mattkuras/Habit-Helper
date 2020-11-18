@@ -36,7 +36,7 @@ module Api
             def destroy
                 identity = Identity.find_by(id: params[:id])
                 if identity.destroy
-                    render json: 'successfully deleted'
+                    render json: {status: 200}
                 else
                     render json: { error: identity.errors.messages }, status: 422
                 end

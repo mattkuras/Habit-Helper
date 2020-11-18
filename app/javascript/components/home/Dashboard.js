@@ -60,7 +60,12 @@ const Dashboard = (props) => {
     return (
         // create home div, header, subheader, and grid for above map function
         <div className='home'>
-            {idShowOpen ? <IdentityShow user={props.user} show={idShowOpen} id={clickedId} close={backdropClickHandler} /> : null}
+            {idShowOpen ? <IdentityShow user={props.user}
+                identities={identities}
+                setIdentities={setIdentities}
+                show={idShowOpen}
+                id={clickedId}
+                close={backdropClickHandler} /> : null}
             {backdrop}
             <div className='header'>
                 <h1>Atomic Habits</h1>
