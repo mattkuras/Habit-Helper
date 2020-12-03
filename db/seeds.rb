@@ -19,7 +19,7 @@ categories = Category.create([
     {name: "Photography", image: 'https://library.kissclipart.com/20180831/eqw/kissclipart-clip-art-photographer-clipart-photography-clip-art-550ffd755bd9f5aa.jpg'},
     {name: "Web Development", image: 'https://p7.hiclipart.com/preview/677/439/740/web-development-php-software-developer-programmer-web-design-computer-user-icon-svg.jpg'},
     {name: "Writing", image: 'https://cdn.clipart.email/5a4d50fe0376ed193f83b44ecbf9074b_writer-silhouette-transparent-png-clipart-free-download-ywd_1200-952.jpeg'},
-    {name: "Reading"},
+    {name: "Reading", image: '../public/Reader_Artwork.png'},
     {name: "Social"},
     {name: "Cooking"},
     {name: "Surfing"},

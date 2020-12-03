@@ -76,7 +76,7 @@ class Login extends Component {
           <p>We're just here to remind you.</p>
         </div>
         <form className='login-form' onSubmit={this.handleSubmit}>
-          <h1>Atomic<br /> Habits</h1>
+          <h1>Habit<br /> Helper</h1>
           <input className='login-input'
             placeholder="email"
             type="text"
