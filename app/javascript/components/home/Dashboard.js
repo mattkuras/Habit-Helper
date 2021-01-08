@@ -4,8 +4,6 @@ import IdentityCard from './Identity-card'
 import Backdrop from '../backdrop/Backdrop'
 import IdentityShow from '../IdentityShow/IdentityShow'
 import './Dashboard.css'
-import { useDispatch } from 'react-redux'
-import { addIdentities } from './IdentitiesSlice'
 
 // get identities data from db
 // populate state with hooks
@@ -16,7 +14,6 @@ const Dashboard = (props) => {
     const [clickedId, setClickedId] = useState()
     const [loaded, setLoaded] = useState(false)
 
-    const dispatch = useDispatch()
 
     const showPageClickHandler = (e) => {
         setClickedId(e.target.id)
@@ -27,18 +24,14 @@ const Dashboard = (props) => {
     }
 
     useEffect(() => {
-        // console.log('use effect ran')
-        console.log('dashboard fetch ids executed ')
         Axios.get(`/api/v1/users/${props.user.id}`)
             .then(resp => {
-                // console.log('started fetch')
                 setIdentities(resp.data.included)
             }).then(identities.length > 0 ? setLoaded(true) : console.log('didnt get ids yet'))
             .catch(resp => console.log(resp))
     }, [identities.length])
 
 
-    // map identities data from state with Identity Component
 
     let backdrop;
 
@@ -58,7 +51,7 @@ const Dashboard = (props) => {
 
 
     return (
-        // create home div, header, subheader, and grid for above map function
+
         <div className='home'>
             {idShowOpen ? <IdentityShow user={props.user}
                 identities={identities}

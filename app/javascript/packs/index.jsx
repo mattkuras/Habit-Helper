@@ -7,15 +7,11 @@ import ReactDOM from 'react-dom'
 import App from '../components/App'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './index.css'
-import store from './store.js'
-import { Provider } from 'react-redux'
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
     <Router>
-      <Provider store={store}>
         <Route path="/" component={App}/>
-      </Provider>
     </Router>,
     document.body.appendChild(document.createElement('div')),
   )

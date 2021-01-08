@@ -1,13 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import './SideDrawer.css'
 import { Link } from 'react-router-dom'
-import { useSelector } from 'react-redux'
 
 
 const sideDrawer = props => {
 
     const [ids, setIds] = useState([])
-    const identities = useSelector(state => state.identities)
     let idList
     
 
