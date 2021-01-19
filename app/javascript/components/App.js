@@ -1,7 +1,7 @@
-import React, { Fragment, useState, useEffect } from 'react'
+import React, {  useState, useEffect } from 'react'
 import { Route, Switch, Redirect, useHistory } from 'react-router-dom'
 import Dashboard from './home/Dashboard'
-import IdentityShow from './IdentityShow/IdentityShow'
+// import IdentityShow from './IdentityShow/IdentityShow'
 import Toolbar from './toolbar/Toolbar.js'
 import SideDrawer from './sideDrawer/SideDrawer'
 import Backdrop from './backdrop/Backdrop'
@@ -9,7 +9,7 @@ import axios from 'axios'
 import Login from './registrations/Login'
 import Signup from './registrations/Signup'
 import CreateIdentities from './registrations/CreateIdentities'
-import sideDrawer from './sideDrawer/SideDrawer'
+// import sideDrawer from './sideDrawer/SideDrawer'
 
 const App = () => {
 
