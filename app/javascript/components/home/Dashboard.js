@@ -14,7 +14,6 @@ const Dashboard = (props) => {
     const [clickedId, setClickedId] = useState()
     const [loaded, setLoaded] = useState(false)
 
-
     const showPageClickHandler = (e) => {
         setClickedId(e.target.id)
         setIdShow(true)
